@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {TodoService} from '../services/todo.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
@@ -12,7 +12,7 @@ import { TodoEditComponent } from '../todo-edit/todo-edit.component';
 })
 export class TodoComponent implements OnInit {
   @Input() todo;
-  constructor(private todoService: TodoService, private modalService : NgbModal) { }
+  constructor(private todoService: TodoService, private modalService: NgbModal) { }
   todoTitle = '';
   isEditing = false;
   statuses: string[];
@@ -29,9 +29,8 @@ export class TodoComponent implements OnInit {
       if (result === 'yes') {
         this.todoService.deleteTodo(todo);
       }
-    }
-    catch(ex){
-      
+    } catch (ex) {
+
     }
   }
 
