@@ -3,6 +3,7 @@ import {TodoService} from '../services/todo.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
 import { ITodo } from '../interfaces/itodo';
+import { TodoEditComponent } from '../todo-edit/todo-edit.component';
 
 @Component({
   selector: 'app-todo',
@@ -34,8 +35,13 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  editTodo(): void {
-    
+  async editTodo(todo: ITodo): Promise<void> {
+    const modal = this.modalService.open(TodoEditComponent);
+    modal.componentInstance.modalInstance = modal;
+    modal.componentInstance.todo = todo;
+
+    const result = await modal.result;
+    this.todo = result;
   }
 
 }
