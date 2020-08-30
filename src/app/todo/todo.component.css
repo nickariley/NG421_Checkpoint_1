@@ -3,14 +3,18 @@ button {
 }
 
 .todo {
-    color: rgb(0, 0, 255)
+    color: rgb(0, 0, 255, 0.7)
 }
 
 .doing {
-    color: rgb(0, 255, 0)
+    color: rgb(255, 153, 0)
 }
 
 .done {
     color: rgb(255, 0, 0);
     text-decoration: line-through;
+}
+
+.todoTitle {
+    font-weight: bold;
 }
