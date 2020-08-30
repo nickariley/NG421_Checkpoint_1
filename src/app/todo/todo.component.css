@@ -1,15 +1,16 @@
+button {
+    margin-right: 2px;
+}
+
 .todo {
-    color: #FF0000
+    color: rgb(0, 0, 255)
 }
 
 .doing {
-    color: #00be00
+    color: rgb(0, 255, 0)
 }
 
 .done {
+    color: rgb(255, 0, 0);
     text-decoration: line-through;
-}
-
-button {
-    margin-right: 2px;
 }
