@@ -2,7 +2,7 @@
     <label class="todoTitle" (dblclick)="isEditing = true" [hidden]="isEditing" [ngClass]="{'todo': todo.status === 'Todo', 'doing': todo.status === 'Doing', 'done': todo.status === 'Done'}">{{todo.title}}</label>
     <input type='text' [(ngModel)]="todo.title" *ngIf="isEditing" (blur)="isEditing = false">
     <div class="float-right">
-        <button type="button" (click)="editTodo(todo)" class="btn btn-danger btn-sm">Edit</button>
+        <button type="button" (click)="editTodo(todo)" class="btn btn-success btn-sm">Edit</button>
     </div>
     <div class="float-right">
         <button type="button" (click)="deleteTodo(todo)" class="btn btn-danger btn-sm">Delete</button>
